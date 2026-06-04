@@ -100,3 +100,13 @@ https://react.dev/link/hydration-mismatch
  GET / 200 in 345ms (next.js: 117ms, application-code: 228ms)
  GET /courses 200 in 41ms (next.js: 13ms, application-code: 28ms)
  GET /admin 200 in 59ms (next.js: 14ms, application-code: 45ms)
+⚠ Found a change in next.config.ts. Restarting the server to apply the changes...
+▲ Next.js 16.2.7 (Turbopack)
+- Local:         http://localhost:3000
+- Network:       http://192.168.0.2:3000
+- Environments: .env.local
+✓ Ready in 1220ms
+⚠ `eslint` configuration in next.config.ts is no longer supported. See more info here: https://nextjs.org/docs/app/api-reference/cli/next#next-lint-options
+⚠ Invalid next.config.ts options detected:
+⚠     Unrecognized key(s) in object: 'eslint'
+⚠ See more info here: https://nextjs.org/docs/messages/invalid-next-config
