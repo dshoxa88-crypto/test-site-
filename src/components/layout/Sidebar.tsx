@@ -22,7 +22,9 @@ const navItems = [
 ]
 
 export const Sidebar = ({ activeSection, onSectionChange }: any) => {
-  const { lang, level, progress, isPaid } = useStore()
+  const { lang, user, progress } = useStore()
+
+  if (!user) return null
 
   return (
     <aside className="fixed left-0 top-0 h-screen w-[290px] p-6 bg-white/72 dark:bg-slate-900/78 backdrop-blur-lg border-r border-slate-200 dark:border-slate-800 z-10 hidden lg:flex flex-col">
@@ -55,8 +57,8 @@ export const Sidebar = ({ activeSection, onSectionChange }: any) => {
 
       <div className="mt-auto">
         <div className="p-4 rounded-[20px] bg-gradient-to-br from-blue-50 to-cyan-50 dark:from-blue-900/10 dark:to-cyan-900/10 border border-slate-100 dark:border-slate-800">
-          <b className="block text-sm">{isPaid ? 'Premium Student' : 'Student'}</b>
-          <span className="text-xs text-slate-500">Level: {level || 'not tested'}</span>
+          <b className="block text-sm">{user.isPaid ? 'Premium Student' : 'Student'}</b>
+          <span className="text-xs text-slate-500">Level: {user.level || 'not tested'}</span>
           <div className="h-2 bg-slate-200 dark:bg-slate-800 rounded-full mt-3 overflow-hidden">
             <motion.div
               initial={{ width: 0 }}
